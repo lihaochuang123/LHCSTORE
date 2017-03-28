@@ -1,0 +1,8 @@
+select 'alter table ' ||table_name||' disable constraint '||constraint_name||';' from user_constraints where constraint_type='R'
+ 
+select 'alter table ' ||table_name||' enable constraint '||constraint_name||';' from user_constraints where
+constraint_type='R'
+ 
+$imp lihaochuang1/lihaochuang1@ORCL fromuser=sm_pm_all touser=lihaochuang1 file=E:\a.dmp rows=y;
+
+ 
